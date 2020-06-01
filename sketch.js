@@ -20,6 +20,8 @@ let labelColor = 0 ;
 let backColor = 0 ;
 let planeDict = new p5.TypedDict() ;
 let img ;
+let imgX = 48 ;
+let imgY = 48 ;
 
 // As a non-JS programmer, the apparently typeless (or at least "type-flexible")
 // nature of this stuff sort of weirds me out.  But I think that imposing static
@@ -171,10 +173,10 @@ function draw() {
 
   // Draw a small circle for the plane
   // ToDo: find a tiny little plane image to use here...
-  image(img, planeX, planeY, 32, 32) ;
+  image(img, planeX - (imgX / 2), planeY - (imgY / 2), imgX, imgY) ;
 
-  fill( planeColor ) ;
+  //fill( planeColor ) ;
   noStroke( ) ;
-  circle( planeX, planeY, 5 ) ;
+  //circle( planeX, planeY, 5 ) ;
 
 }
